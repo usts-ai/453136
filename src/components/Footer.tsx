@@ -33,41 +33,41 @@ const Footer: React.FC = () => {
     {
       title: "Produit",
       links: [
-        { name: "Fonctionnalités", url: "#" },
-        { name: "Recherche IA", url: "#" },
-        { name: "Tarification", url: "#" },
-        { name: "Témoignages", url: "#" },
-        { name: "Guide d'utilisation", url: "#" }
+        { name: "Fonctionnalités", url: "/fonctionnalites" },
+        { name: "Recherche IA", url: "/recherche-ia" },
+        { name: "Tarification", url: "/tarification" },
+        { name: "Témoignages", url: "/temoignages" },
+        { name: "Guide d'utilisation", url: "/guide-d-utilisation" }
       ]
     },
     {
       title: "Ressources",
       links: [
-        { name: "Centre d'aide", url: "#" },
-        { name: "Blog", url: "#" },
-        { name: "Communauté", url: "#" },
-        { name: "Webinaires", url: "#" },
-        { name: "API Documentation", url: "#" }
+        { name: "Centre d'aide", url: "/centre-d-aide" },
+        { name: "Blog", url: "/blog" },
+        { name: "Communauté", url: "/communaute" },
+        { name: "Webinaires", url: "/webinaires" },
+        { name: "API Documentation", url: "/api-documentation" }
       ]
     },
     {
       title: "Entreprise",
       links: [
-        { name: "À propos", url: "#" },
-        { name: "Carrières", url: "#" },
-        { name: "Partenaires", url: "#" },
-        { name: "Presse", url: "#" },
-        { name: "Nous contacter", url: "#" }
+        { name: "À propos", url: "/a-propos" },
+        { name: "Carrières", url: "/carrieres" },
+        { name: "Partenaires", url: "/partenaires" },
+        { name: "Presse", url: "/presse" },
+        { name: "Nous contacter", url: "/nous-contacter" }
       ]
     },
     {
       title: "Légal",
       links: [
-        { name: "Confidentialité", url: "#" },
-        { name: "Conditions d'utilisation", url: "#" },
-        { name: "Cookies", url: "#" },
-        { name: "RGPD", url: "#" },
-        { name: "Mentions légales", url: "#" }
+        { name: "Confidentialité", url: "/confidentialite" },
+        { name: "Conditions d'utilisation", url: "/conditions" },
+        { name: "Cookies", url: "/cookies" },
+        { name: "RGPD", url: "/rgpd" },
+        { name: "Mentions légales", url: "/mentions-legales" }
       ]
     }
   ];
@@ -187,13 +187,13 @@ const Footer: React.FC = () => {
             variants={itemVariants}
           >
             <p className="text-gray-500 text-sm text-center md:text-left mb-4 md:mb-0">
-              © {new Date().getFullYear()} DevConnectAI. Tous droits réservés.
+              {new Date().getFullYear()} DevConnectAI. Tous droits réservés.
             </p>
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-gray-500">
-              <a href="#" className="hover:text-white transition-colors">Confidentialité</a>
-              <a href="#" className="hover:text-white transition-colors">Conditions d'utilisation</a>
-              <a href="#" className="hover:text-white transition-colors">Cookies</a>
-              <a href="#" className="hover:text-white transition-colors">Plan du site</a>
+              <a href="/confidentialite" className="hover:text-white transition-colors">Confidentialité</a>
+              <a href="/conditions" className="hover:text-white transition-colors">Conditions d'utilisation</a>
+              <a href="/cookies" className="hover:text-white transition-colors">Cookies</a>
+              <a href="/plan-du-site" className="hover:text-white transition-colors">Plan du site</a>
             </div>
           </motion.div>
         </motion.div>

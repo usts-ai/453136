@@ -244,7 +244,7 @@ const ProfileSection: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-gray-400 text-sm">Délai de réponse</h4>
-                    <p className="text-white text-xl font-bold">< 2h</p>
+                    <p className="text-white text-xl font-bold">&lt; 2h</p>
                   </div>
                 </div>
 

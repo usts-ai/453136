@@ -1,57 +1,15 @@
-import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import Features from '../components/Features';
-import ProfileSection from '../components/ProfileSection';
-import AISection from '../components/AISection';
-import Testimonials from '../components/Testimonials';
-import StatsSection from '../components/StatsSection';
-import CallToAction from '../components/CallToAction';
-import Footer from '../components/Footer';
+import React from 'react';
 
 const HomePage: React.FC = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [controls, inView]);
-
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-gray-800 min-h-screen text-white overflow-hidden">
-      <Header />
-      <Hero />
-      
-      <motion.div
-        ref={ref}
-        initial="hidden"
-        animate={controls}
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: {
-              staggerChildren: 0.3
-            }
-          }
-        }}
-      >
-        <Features />
-        <ProfileSection />
-        <AISection />
-        <StatsSection />
-        <Testimonials />
-        <CallToAction />
-      </motion.div>
-      
-      <Footer />
+    <div className="bg-gradient-to-b from-gray-900 to-gray-800 min-h-screen text-white p-4">
+      <div className="max-w-4xl mx-auto my-20 p-8 bg-gray-800 rounded-lg shadow-lg">
+        <h1 className="text-4xl font-bold text-center text-white mb-8">Page de test</h1>
+        <p className="text-xl text-white text-center mb-8">Si vous pouvez voir ce texte, le rendu fonctionne correctement.</p>
+        <div className="bg-blue-600 text-white font-bold py-4 px-6 rounded-full text-center">
+          Ceci est un bouton test
+        </div>
+      </div>
     </div>
   );
 };

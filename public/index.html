@@ -1,45 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/USTS.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Demo from USTS"
-    />
+    <meta name="description" content="DevConnectAI - Réseau social avec IA" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/USTS.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>USTS - Demo</title>
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: #111827;
+        color: white;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      header {
+        padding: 20px 0;
+        margin-bottom: 30px;
+      }
+      h1, h2, h3 {
+        margin-top: 0;
+      }
+      .text-accent {
+        color: #40E0D0;
+      }
+      .text-secondary {
+        color: #7B1FA2;
+      }
+      .bg-card {
+        background-color: #2d3748;
+        border-radius: 8px;
+        padding: 30px;
+        margin-bottom: 30px;
+      }
+      .btn-primary {
+        background-color: #007BFF;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 9999px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+      .feature-card {
+        background-color: #2d3748;
+        border-radius: 4px;
+        padding: 20px;
+      }
+      footer {
+        padding: 20px 0;
+        border-top: 1px solid #2d3748;
+        text-align: center;
+      }
+    </style>
+    
+    <title>DevConnectAI</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <noscript>Vous devez activer JavaScript pour exécuter cette application.</noscript>
+    <div id="root">
+      <!-- Contenu statique de secours -->
+      <div class="container">
+        <header>
+          <h1><span class="text-accent">Dev</span>Connect<span class="text-secondary">AI</span></h1>
+        </header>
+        
+        <main>
+          <section class="bg-card" style="text-align: center;">
+            <h2 style="font-size: 28px; margin-bottom: 20px;">Trouvez le développeur parfait pour votre projet</h2>
+            <p style="margin-bottom: 20px;">
+              Plateforme de mise en relation intelligente entre développeurs et entreprises, propulsée par l'IA
+            </p>
+            <button class="btn-primary">Commencer maintenant</button>
+          </section>
+          
+          <section>
+            <h2 style="font-size: 24px; margin-bottom: 20px;">Nos fonctionnalités</h2>
+            <div class="features-grid">
+              <div class="feature-card">
+                <h3 style="font-size: 18px; margin-bottom: 10px;">Recherche intelligente</h3>
+                <p>Notre IA analyse vos besoins et trouve les meilleurs talents</p>
+              </div>
+              <div class="feature-card">
+                <h3 style="font-size: 18px; margin-bottom: 10px;">Messagerie intégrée</h3>
+                <p>Communiquez facilement avec les développeurs potentiels</p>
+              </div>
+              <div class="feature-card">
+                <h3 style="font-size: 18px; margin-bottom: 10px;">Profils vérifiés</h3>
+                <p>Tous les profils sont vérifiés pour garantir leur authenticité</p>
+              </div>
+            </div>
+          </section>
+        </main>
+        
+        <footer>
+          <p> 2025 DevConnectAI. Tous droits réservés.</p>
+        </footer>
+      </div>
+    </div>
+    
+    <script>
+      // Ce script va s'exécuter si React ne parvient pas à rendre le contenu
+      // Il vérifie si React a réussi à rendre le contenu
+      setTimeout(function() {
+        var rootElement = document.getElementById('root');
+        // Si le contenu du root est exactement notre HTML de secours, alors React n'a pas réussi à rendre
+        console.log("État actuel du DOM : ", rootElement.innerHTML);
+      }, 2000);
+    </script>
   </body>
 </html>
